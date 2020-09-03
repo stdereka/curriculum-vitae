@@ -11,7 +11,7 @@ jobs:
     - name: Build two-column english
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: main.tex
+        root_file: mmayer.tex
         working_directory: two_column_cv_en
         args: -jobname=two_column_cv_en -pdf -file-line-error -halt-on-error -interaction=nonstopmode
         compiler: latexmk
