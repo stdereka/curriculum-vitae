@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
     # English
     - name: Build two-column english
-      uses: xu-cheng/latex-action@v2
+      uses: xu-cheng/latex-action@v1
       with:
         root_file: mmayer.tex
         working_directory: two_column_cv_en
