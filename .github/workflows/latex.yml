@@ -13,9 +13,9 @@ jobs:
       with:
         root_file: mmayer.tex
         working_directory: two_column_cv_en
-        args: -jobname=two_column_cv_en -pdf -file-line-error -halt-on-error -interaction=nonstopmode -synctex=1
+        args: -jobname=two_column_cv_en -pdf -file-line-error -halt-on-error -interaction=nonstopmode
         compiler: latexmk
-    - name: Upload two-column cv en english
+    - name: Upload two-column cv english
       uses: actions/upload-artifact@v2
       with:
         name: two_column_cv_en
@@ -46,7 +46,7 @@ jobs:
           release_name: CV (version ${{ steps.vars.outputs.date }})
           draft: false
           prerelease: false
-      - name: Upload one-column english CV asset
+      - name: Upload two-column english CV asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
