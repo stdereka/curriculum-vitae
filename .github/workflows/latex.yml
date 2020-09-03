@@ -13,7 +13,7 @@ jobs:
       with:
         root_file: mmayer.tex
         working_directory: two_column_cv_en
-        args: -jobname=two_column_cv_en -pdf -file-line-error -halt-on-error -interaction=nonstopmode -synctex=1
+        args: -jobname=two_column_cv_en -pdf -interaction=nonstopmode -synctex=1
         compiler: latexmk
     - name: Upload two-column cv en english
       uses: actions/upload-artifact@v2
