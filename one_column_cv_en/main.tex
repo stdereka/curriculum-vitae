@@ -1,0 +1,136 @@
+                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[12pt,a4paper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{purple} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.9]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+\usepackage{amsmath}
+
+\firstname{Stanislav} % Your first name
+\familyname{Dereka} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+%\address{30/8, Pervomaiskaya st.}{Dolgoprudny, Russia 141700}
+\address{Languages:\\ English (B2), Russian (native speaker)\\}
+\mobile{+7 9778345392}
+%\phone{(000) 111 1112}
+%\fax{(000) 111 1113}
+\email{dereka.sa@phystech.edu}
+%\homepage{https://github.com/stdereka}{https://github.com/stdereka} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{DOB: the 2$^{\text{\it nd}}$ of December, 1997}
+%\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	
+	\homepage{github.com/stdereka}{}
+	\makecvtitle % Print the CV title
+	
+	%----------------------------------------------------------------------------------------
+	%   EDUCATION SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\section{Education}
+	
+	\cventry{2016--2020(expected)}{Moscow Institute of Physics and Technology (MIPT), Moscow (Russia)}{}{Department of Molecular and Chemical Physics (B.Sc. at Applied Mathematics and Physics)}
+	{}{Learned subjects:
+		\\\textbf{Computer Science:} algorithms and data structures, object oriented programming (C++, Java, Python)
+		\\\textbf{Mathematics:} computational mathematics, calculus, analytic geometry, linear algebra, differential equations, probability theory and mathematical statistics, complex analysis
+		\\\textbf{Physics:} general physics, theoretical physics, chemical physics
+		\\\textbf{Other:} ecology, practical psychology
+		\\\textbf{Average grade:} 8.6/10; ranking top-10\% of the university (autumn 2019)
+	}  % Arguments not required can be left empty
+	
+	%\section{Masters Thesis}
+	
+	%\cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
+	%\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+	%\cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+	
+	\section{Work experience}
+	
+	\cvitem{2018-2019}{\textbf{Department of Radioelectronics and Applied Informatics MIPT} Developed an object detection algorithm which works on satellite pictures. Achieved 25\% better performance vs baseline model
+	}
+	
+	\cvitem{2018}{\textbf{Samsung R$\&$D Institute Russia} Worked for 2 months on a deep learning photo enhancer developement, made contribution into model developement with MXNet framework, improved general enhancement quality and increased convergence rate by 50 \% by modifying loss function}
+	
+	\section{Additional education}
+	
+	\cvitem{2018}{\textbf{Mathematics and Python for data analysis, Supervised learning, Unsupervised learning} - 3 courses by Moscow Institute of Physics and Technology $\&$ Yandex on Coursera }
+	
+	\section{Computer and programming skills}
+	\cvitem{Python}{
+		Scripting, data analysis and visualization. Familiar with packages: 
+		\begin{itemize}
+			\item[$\bullet$] \textbf{General} data processing packages: NumPy, SciPy, Matplotlib, Pandas, Statsmodels, Seaborn
+			\item[$\bullet$] \textbf{ML} packages and deep learning frameworks: Sklearn, Keras, MXNet, Xgboost, Lasagne, Gensim
+		\end{itemize}
+	}
+	\cvitem{C++}{Object oriented programming, STL, Google Test framework, CMake build tool}
+	
+	\cvitem{Java}{Basic knowledge, object oriented programming}
+	
+	\cvitem{Other}{Linux fluent user, Bash scripting, Git experience, familiar with \LaTeX}
+	
+	
+	\section{Hobbies \& Extra-curricular activities}
+	%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+	\cvitem{}{Involved in \textbf{sport activity} (light athletic and swimming). Novice \textbf{stand-up} comedian - in 2018 took part in local MIPT stand-up concert}
+	
+	%----------------------------------------------------------------------------------------
+	%   COVER LETTER
+	%----------------------------------------------------------------------------------------
+	
+	% To remove the cover letter, comment out this entire block
+	
+	%\clearpage
+	
+	%\recipient{HR Departmnet}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+	%\date{\today} % Letter date
+	%\opening{Dear Sir or Madam,} % Opening greeting
+	%\closing{Sincerely yours,} % Closing phrase
+	%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+	
+	%\makelettertitle % Print letter title
+	
+	%\lipsum[1-3] % Dummy text
+	
+	%\makeletterclosing % Print letter signature
+	
+	%----------------------------------------------------------------------------------------
+	
+\end{document}
+
