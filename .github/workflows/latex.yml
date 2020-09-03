@@ -8,18 +8,18 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     # English
-    - name: Build one-column english
+    - name: Build two-column english
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: main.tex
-        working_directory: one_column_cv_en
-        args: -jobname=one_column_cv_en -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+        root_file: mmayer.tex
+        working_directory: two_column_cv_en
+        args: -jobname=two_column_cv_en -pdf -file-line-error -halt-on-error -interaction=nonstopmode
         compiler: latexmk
-    - name: Upload one-column cv en english
+    - name: Upload two-column cv english
       uses: actions/upload-artifact@v2
       with:
-        name: one_column_cv_en
-        path: one_column_cv_en/one_column_cv_en.pdf
+        name: two_column_cv_en
+        path: two_column_cv_en/two_column_cv_en.pdf
 
   deploy:
     runs-on: ubuntu-latest
@@ -34,7 +34,7 @@ jobs:
       - name: Download two-page english
         uses: actions/download-artifact@v2
         with:
-          name: one_column_cv_en
+          name: two_column_cv_en
 
       - name: Create Release
         uses: actions/create-release@v1
@@ -46,12 +46,12 @@ jobs:
           release_name: CV (version ${{ steps.vars.outputs.date }})
           draft: false
           prerelease: false
-      - name: Upload one-column english CV asset
+      - name: Upload two-column english CV asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./one_column_cv_en.pdf
-          asset_name: one_column_cv_en.pdf
+          asset_path: ./two_column_cv_en.pdf
+          asset_name: two_column_cv_en.pdf
           asset_content_type: application/pdf
